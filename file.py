@@ -46,13 +46,17 @@ def get_shop_list_by_dishes(dish,person,cook_book):
     return dict_dish
 
 
+def main_book(dishes_list,person):
 
-cook_book_rez = composition_bluda()
-dishes_list=['Омлет','Утка по-пекински','Запеченный картофель']
-print('======================================================')
-print('=====Список покупок для блюд {} ===='.format(dishes_list))
-print('======================================================')
-rezult = get_shop_list_by_dishes(dishes_list,2,cook_book_rez)
-print(rezult)
-print('======================================================')
+    cook_book_rez = composition_bluda()
+    #dishes_list=['Омлет','Утка по-пекински','Запеченный картофель']
+    print('======================================================')
+    print('=====Список покупок для блюд {} ===='.format(dishes_list))
+    print('======================================================')
+    rezult = get_shop_list_by_dishes(dishes_list,person,cook_book_rez)
+    print(rezult)
+    print('======================================================')
+    return rezult
 
+if __name__== '__main__':
+    main_book(['Омлет','Утка по-пекински','Запеченный картофель'],3)
